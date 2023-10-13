@@ -12,7 +12,7 @@ class sshLoadFile:
                 )
         self.sftp = self.client.open_sftp()
 
-    def sshnumpy(self, filename):
+    def sshloadtxt(self, filename):
         with self.sftp.open(filename, 'r') as f:
             data = np.loadtxt(f)
         return data
