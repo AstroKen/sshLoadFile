@@ -8,7 +8,7 @@ class sshLoadFile:
         self.client.connect(
                 hostname=hostname,
                 username=usename,
-                port=port,
+                port=int(port),
                 key_filename=key_filename
                 )
         self.sftp = self.client.open_sftp()
